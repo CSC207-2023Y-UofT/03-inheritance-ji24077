@@ -97,12 +97,12 @@ public abstract class Bag {
     {
         if (numberOfContents < capacity)
         {
-            String[] Contents_new = new String[numberOfContents + 1]; //inc numof contetns
+            String[] Contents_new = new String[numberOfContents + 1];
             for (int i = 0; i < numberOfContents; i++)
             {
                 Contents_new[i] = contents[i];
             }
-            Contents_new[numberOfContents] = item; //마지막곳에 아이템 넛기
+            Contents_new[numberOfContents] = item;
             contents = Contents_new;
             numberOfContents++;
             return true;
