@@ -5,8 +5,7 @@
  * 1. Introduction to Java helpful.
  */
 
-public abstract class Bag
-{
+public abstract class Bag {
     /*
      * TODO: Create the following private instance variables
      *       - a String named color
@@ -52,16 +51,17 @@ public abstract class Bag
      */
     public String getColor()
     {
+        return color;
     }
     public int getNumberOfContents()
     {
 
-       // return numberofContents;
+       return numberofContents;
 
     }
     public int getCapacity()
     {
-        //return capacity;
+        return capacity;
     }
 
 
@@ -107,7 +107,7 @@ public abstract class Bag
         }
         return false;
     }
-    }
+
 
 
 
@@ -148,9 +148,10 @@ public abstract class Bag
      *
      * @param n the amount to increase this Bag's capacity by
      */
-    public void increaseCapacity(int n) {
+    public void increaseCapacity(int n)
+    {
         // TODO: Implement this method.
-        capacity += n;
+        capacity = capacity + n;
 
     }
 
