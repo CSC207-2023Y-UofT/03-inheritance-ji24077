@@ -118,8 +118,10 @@ public abstract class Bag {
      *
      * @return
      */
-    public String popItem() {
-        if (numberOfContents > 0) {
+    public String popItem()
+    {
+        if (numberOfContents > 0)
+        {
             String lastItem = contents[numberOfContents - 1];
             String[] newContents = new String[numberOfContents - 1];
             System.arraycopy(contents, 0, newContents, 0, numberOfContents - 1);
