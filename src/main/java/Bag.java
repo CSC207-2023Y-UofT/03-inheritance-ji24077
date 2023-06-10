@@ -13,6 +13,10 @@ public abstract class Bag {
      *       - an int named capacity
      *       - an array of Strings named contents
      */
+    String color;
+    int numberOfContents;
+    int capacity;
+    String[] contents;
 
 
 
@@ -27,6 +31,14 @@ public abstract class Bag {
      * its contents.)
      */
 
+    public bag(String color, int capacity)
+    {
+        this.color = color;
+        this.capacity = capacity;
+        this.numberOfContents = 0;
+        this.contents = new String[0];
+    }
+
 
 
 
@@ -37,6 +49,21 @@ public abstract class Bag {
      *           - getNumberOfContents
      *           - getCapacity
      */
+    public String getColor()
+    {
+        return color;
+    }
+    public int getNumberOfContents()
+    {
+
+        return numberofContents;
+
+    }
+    public int getCapacity()
+    {
+        return capacity;
+    }
+
 
 
 
@@ -45,7 +72,11 @@ public abstract class Bag {
      * TODO: Create a setter function called setColor which sets the
      *       color of this bag to the given color.
      */
-
+    public String setColor(String color)
+    {
+        this.color = color;
+    }
+// ask about diff between color vs colour;
 
 
 
@@ -60,6 +91,18 @@ public abstract class Bag {
      *       This method should return true if the item was added
      *       and false otherwise.
      */
+    public boolean addItem(String item)
+    {
+        if(numberOfContents < capacity)
+        {
+            String[] newContents = new String[numberOfContents + 1];
+            System.arraycopy(contents, 0, newContents, 0, numberOfContents);
+            newContents[numberOfContents] = item;
+            contents = newContents;
+            numberOfContents++;
+            return true;
+        }
+    }
 
 
 
@@ -75,6 +118,17 @@ public abstract class Bag {
      *
      * @return
      */
+    public String popItem() {
+        if (numberOfContents > 0) {
+            String lastItem = contents[numberOfContents - 1];
+            String[] newContents = new String[numberOfContents - 1];
+            System.arraycopy(contents, 0, newContents, 0, numberOfContents - 1);
+            contents = newContents;
+            numberOfContents--;
+            return lastItem;
+        }
+        return null;
+    }
 
 
 
@@ -87,6 +141,7 @@ public abstract class Bag {
      */
     public void increaseCapacity(int n) {
         // TODO: Implement this method.
+        capacity = capacity + n;
 
     }
 
