@@ -31,7 +31,7 @@ public abstract class Bag {
      * its contents.)
      */
 
-    public bag(String color, int capacity)
+    public Bag(String color, int capacity)
     {
         this.color = color;
         this.capacity = capacity;
