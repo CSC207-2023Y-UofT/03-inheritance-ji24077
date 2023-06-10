@@ -46,11 +46,12 @@ public class CrossbodyBag extends Bag {
 
 
     public void enhance() {
-        capacity += 2;
+        capacity = capacity + 2;
     }
 
 
-    public String toString() {
-        return "Crossbody Bag with " + numberOfStraps + " straps (" + numberOfContents + " / " + capacity + ")";
+    public String toString()
+    {
+        return "Crossbody Bag with " + this.numberOfStraps + " straps (" + this.numberOfContents + " / " + this.capacity + ")";
     }
 }
