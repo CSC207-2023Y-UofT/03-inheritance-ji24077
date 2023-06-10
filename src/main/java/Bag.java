@@ -51,17 +51,16 @@ public abstract class Bag {
      */
     public String getColor()
     {
-        return color;
+        return this.color;
     }
     public int getNumberOfContents()
     {
-
-       return numberofContents;
+        return this.numberOfContents;
 
     }
     public int getCapacity()
     {
-        return capacity;
+        return this.capacity;
     }
 
 
