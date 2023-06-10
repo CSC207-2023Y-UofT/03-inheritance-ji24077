@@ -5,7 +5,8 @@
  * 1. Introduction to Java helpful.
  */
 
-public abstract class Bag {
+public abstract class Bag
+{
     /*
      * TODO: Create the following private instance variables
      *       - a String named color
@@ -31,7 +32,7 @@ public abstract class Bag {
      * its contents.)
      */
 
-    public bag(String color, int capacity)
+    public void bag(String color, int capacity)
     {
         this.color = color;
         this.capacity = capacity;
@@ -51,17 +52,16 @@ public abstract class Bag {
      */
     public String getColor()
     {
-        return color;
     }
     public int getNumberOfContents()
     {
 
-        return numberofContents;
+       // return numberofContents;
 
     }
     public int getCapacity()
     {
-        return capacity;
+        //return capacity;
     }
 
 
@@ -93,17 +93,21 @@ public abstract class Bag {
      */
     public boolean addItem(String item)
     {
-        if(numberOfContents < capacity)
+        if (numberOfContents < capacity)
         {
-            String[] newContents = new String[numberOfContents + 1];
-            System.arraycopy(contents, 0, newContents, 0, numberOfContents);
-            newContents[numberOfContents] = item;
-            contents = newContents;
+            String[] Contents_new = new String[numberOfContents + 1];
+            for (int i = 0; i < numberOfContents; i++)
+            {
+                Contents_new[i] = contents[i];
+            }
+            Contents_new[numberOfContents] = item;
+            contents = Contents_new;
             numberOfContents++;
             return true;
         }
+        return false;
     }
-
+    }
 
 
 
@@ -124,7 +128,10 @@ public abstract class Bag {
         {
             String lastItem = contents[numberOfContents - 1];
             String[] newContents = new String[numberOfContents - 1];
-            System.arraycopy(contents, 0, newContents, 0, numberOfContents - 1);
+            for (int i = 0; i < numberOfContents - 1; i++)
+            {
+                newContents[i] = contents[i];
+            }
             contents = newContents;
             numberOfContents--;
             return lastItem;
@@ -143,7 +150,7 @@ public abstract class Bag {
      */
     public void increaseCapacity(int n) {
         // TODO: Implement this method.
-        capacity = capacity + n;
+        capacity += n;
 
     }
 
