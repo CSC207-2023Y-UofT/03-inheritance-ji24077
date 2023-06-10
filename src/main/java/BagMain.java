@@ -5,7 +5,8 @@
  * You may find the readings in chapter 3. Relationships between Classes
  * helpful while working through this exercise.
  */
-class BagMain {
+class BagMain
+{
     /**
      * TODO: Implement this method
      * Enhance each of the bags in bags. If double_enhance_handbags is
@@ -18,7 +19,7 @@ class BagMain {
     {
 
         // TODO: Implement this.
-        for (Bag bag : bags)
+        for(Bag bag : bags)
         {
             bag.enhance();
             if (double_enhance_handbags && bag instanceof HandBag)

@@ -31,7 +31,7 @@ public abstract class Bag {
      * its contents.)
      */
 
-    public void bag(String color, int capacity)
+    public bag(String color, int capacity)
     {
         this.color = color;
         this.capacity = capacity;
@@ -76,7 +76,7 @@ public abstract class Bag {
     {
         this.color = color;
     }
-// ask about diff between color vs colour;
+
 
 
 
@@ -91,16 +91,18 @@ public abstract class Bag {
      *       This method should return true if the item was added
      *       and false otherwise.
      */
+    //recall: numberOfContetns = int,
+    //recall: Contents = array
     public boolean addItem(String item)
     {
         if (numberOfContents < capacity)
         {
-            String[] Contents_new = new String[numberOfContents + 1];
+            String[] Contents_new = new String[numberOfContents + 1]; //inc numof contetns
             for (int i = 0; i < numberOfContents; i++)
             {
                 Contents_new[i] = contents[i];
             }
-            Contents_new[numberOfContents] = item;
+            Contents_new[numberOfContents] = item; //마지막곳에 아이템 넛기
             contents = Contents_new;
             numberOfContents++;
             return true;
@@ -126,7 +128,7 @@ public abstract class Bag {
     {
         if (numberOfContents > 0)
         {
-            String lastItem = contents[numberOfContents - 1];
+            String last_Item = contents[numberOfContents - 1];
             String[] Contents_new = new String[numberOfContents - 1];
             for (int i = 0; i < numberOfContents - 1; i++)
             {
@@ -134,7 +136,7 @@ public abstract class Bag {
             }
             contents = Contents_new;
             numberOfContents--;
-            return lastItem;
+            return last_Item;
         }
         return null;
     }
@@ -151,7 +153,7 @@ public abstract class Bag {
     public void increaseCapacity(int n)
     {
         // TODO: Implement this method.
-        capacity = capacity + n;
+        this.capacity = this.capacity + n;
 
     }
 
