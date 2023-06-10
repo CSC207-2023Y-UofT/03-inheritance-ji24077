@@ -154,7 +154,7 @@ public abstract class Bag {
      *
      * @return
      */
-    @Override
+
     public String toString() {
         return this.color + " Bag (" + this.numberOfContents + " / " +
                 this.capacity + ")";
