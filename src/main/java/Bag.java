@@ -127,12 +127,12 @@ public abstract class Bag
         if (numberOfContents > 0)
         {
             String lastItem = contents[numberOfContents - 1];
-            String[] newContents = new String[numberOfContents - 1];
+            String[] Contents_new = new String[numberOfContents - 1];
             for (int i = 0; i < numberOfContents - 1; i++)
             {
-                newContents[i] = contents[i];
+                Contents_new[i] = contents[i];
             }
-            contents = newContents;
+            contents = Contents_new;
             numberOfContents--;
             return lastItem;
         }
